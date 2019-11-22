@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>交了么作业管理系统::个人页面</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/index.css"></link>
+	</style>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#group").click(function(){
+				var group = "<label class='title-text'>我创建的组</label><button class='more'><img src='icons/more.png'/></button><hr class='sep-line'/><div class='my-group'><div class='group-icon'><img src='icons/gp.png'/><label class='group-name'>2017级软件工程4班</label></div><div class='group-icon'><img src='icons/gp.png'/><label class='group-name'>2017级软件工程3班</label></div></div><label class='title-text'>我加入的组</label><button class='more'><img src='icons/more.png'/></button><hr class='sep-line'/><div class='my-group'><div class='group-icon'><img src='icons/gp.png'/><label class='group-name'>生物工程2017级班</label></div></div>";
+				$(".content").empty();
+          		$(".content").append(group); 
+          	});
+			$("#homework").click(function(){
+				//var homework = $(".content").html().trim().replace(/\s/g,"");
+				var homework = "<label class='title-text'>最近需要提交的作业</label><button class='more'><img src='icons/more.png'/></button><hr class='sep-line'/><div class='homework'><div class='homework-bar' style='background-color: #FFCC00'><label>高级数据库技术第三次作业</label><label>&nbsp;|&nbsp;&nbsp;Deadline:2019-11-22</label><a href='#'><img src='icons/submit.png'></a><a href='#'>去提交</a></div><div class='homework-bar' style='background-color: #CC3333'><label>大数据第三次作业</label><label>&nbsp;|&nbsp;&nbsp;Deadline:2019-11-22</label><a href='#'><img src='icons/submit.png'></a><a href='#'>去提交</a></div><div class='homework-bar' style='background-color: #33CC66'><label>UML第三次作业 </label><label>&nbsp;|&nbsp;&nbsp;Deadline:2019-11-22</label><a href='#'><img src='icons/submit.png'></a><a href='#'>去提交</a></div><div class='homework-bar' style='background-color: #FF6600'><label>Pyhton第三次作业</label><label>&nbsp;|&nbsp;&nbsp;Deadline:2019-11-22</label><a href='#'><img src='icons/submit.png'></a><a href='#'>去提交</a></div>";
+				//alert("ss:"+homework);
+
+				$(".content").empty();
+          		$(".content").append(homework); 
+          	});
+          	$("#info").click(function(){
+          		var info = "<table class='info' border='1' cellspacing='0' cellpadding='0'><tr rowspan='2' height=50px><td width=200px>个人信息</td></tr><tr><td>姓名</td><td>西小北</td></tr><tr><td>学号</td><td>2017118118</td></tr><tr><td>性别</td><td>男</td></tr><tr><td>学院</td><td>信息科学与技术学院</td></tr><tr><td>邮箱</td><td>xxb@stumail.nwu.edu.cn</td></tr><tr><td>手机</td><td>1008611</td></tr></table>";
+          		$(".content").empty();
+				$(".content").append(info); 
+          	});
+		});
+	</script>
+
+</head>
+<body>
+	<header>
+		<div class='logo'>
+			<img src='icons\logo.png' style='width:200px;height:55px'>
+		</div>
+		<nav class='nav'>
+			<a id="one" class="active" href="#">个人</a>
+			<a id="two" href="#">组</a>
+			<a id="three" href="#">文件</a>
+			<a id="four" href="#">关于</a>
+		</nav>
+		<div class='buttons'>
+			<div class='notice'>
+				<img src='icons\notification.png'>
+			</div>
+			<div class='head-pic'>
+				<img src='icons\head-pic.png'>
+			</div>
+		</div>
+	</header>
+	<section class='main'>
+		<aside class='side-bar'>
+			<div class='side-top'>
+			<span>个人中心</span>
+			<ul>
+				<li><img src='icons\group.png'><a id='group' href="#">加入的组</a></li>
+				<li><img src='icons\homework.png'><a id='homework' href="#">我的作业</a></li>
+				<li><img src='icons\info.png'><a id='info' href="#">个人信息</a></li>
+			</ul>
+			</div>
+			<div class='side-bottom'>
+				<div class='line'><span>帮助手册</span><span>反馈</span></div>
+				<div class='line'><span>服务条款</span><span>关于我们</span></div>
+			</div>
+		</aside>
+		<div class='content'>
+			<!-- <table class="info" border="1" cellspacing="0" cellpadding="0">
+				<tr rowspan="2" height=50px>
+					<td width=200px>个人信息</td>
+				</tr>
+				<tr>
+					<td>姓名</td>
+					<td>西小北</td>
+				</tr>
+				<tr>
+					<td>学号</td>
+					<td>2017118118</td>
+				</tr>
+				<tr>
+					<td>性别</td>
+					<td>男</td>
+				</tr>
+				<tr>
+					<td>学院</td>
+					<td>信息科学与技术学院</td>
+				</tr>
+				<tr>
+					<td>邮箱</td>
+					<td>xxb@stumail.nwu.edu.cn</td>
+				</tr>
+				<tr>
+					<td>手机</td>
+					<td>1008611</td>
+				</tr>
+			</table> -->
+			<label class='title-text'>我创建的组</label>
+			<button class='more'><img src='icons/more.png'/></button>
+			<hr class='sep-line'/>
+			<div class="my-group">
+				<div class='group-icon'>
+					<img src='icons/gp.png'/>
+					<label class='group-name'>2017级软件工程4班</label>
+				</div>
+				<div class='group-icon'>
+					<img src='icons/gp.png'/>
+					<label class='group-name'>2017级软件工程3班</label>
+				</div>
+			</div>
+			<label class='title-text'>我加入的组</label>
+			<button class='more'><img src='icons/more.png'/></button>
+			<hr class='sep-line'/>
+			<div class='my-group'>
+				<div class='group-icon'>
+					<img src='icons/gp.png'/>
+					<label class='group-name'>生物工程2017级班</label>
+				</div>
+			</div>
+
+		</div>
+	</section>
+</body>
+</html>
