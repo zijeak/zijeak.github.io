@@ -1,0 +1,353 @@
+/* 默认样式重置 */
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+img{
+    display: block;
+}
+html,html{ overflow: hidden; height: 100%; }
+
+/* 样式开始 */
+#page1{
+    width:100vw;
+    height: 100vh;
+    background: url('img/背景.png') center;
+    background-size: cover;
+}
+#page1-frame{
+    width:100vw;
+    height: 100vh;
+    background: url('img/边框.png') center;
+    background-size: 100% 100%;
+    animation: frame 3s ease 1s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+}
+#text{
+    width:80%;
+    height: 100px;
+    line-height: 50px;
+    background-color: rgba(255,255,255, 0.6);
+    border-radius: 15px;
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left: -40%;
+    margin-top: -120px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    font-size: 19px;
+
+    animation: textanimation 3s ease 4s;
+    animation-fill-mode: both;
+}
+#qiqiu-left{
+    width:40%;
+    height: 30%;
+    position: absolute;
+    background: url('img/左气球.png') center;
+    background-size: 100% 100%;
+    animation: left-qiqiu 3s ease 2s;
+    animation-fill-mode: both;
+}
+#qiqiu-right{
+    width:40%;
+    height: 30%;
+    position: absolute;
+    background: url('img/右气球.png') center;
+    background-size: 100% 100%;
+    animation: right-qiqiu 3s ease 3s;
+    animation-fill-mode: both;
+}
+#bottom{
+    width:100%;
+    height:22%;
+    position: absolute;
+    bottom:10%;
+}
+#forever{
+    width:60%;
+    height: 100%;
+    position: absolute;
+    background: url('img/字.png') center;
+    background-size: 100% 100%;
+    animation: forever 2s ease 4s;
+    animation-fill-mode: both;
+}
+#xiaotian{
+    width:15vh;
+    height:15vh;
+    position: absolute;
+    background: url('img/xiaotian.png') center;
+    background-size: 100% 100%;
+    animation: xiaotian 2s ease 5s;
+    animation-fill-mode: both;
+}
+#xiaoliu{
+    width:15vh;
+    height:15vh;
+    position: absolute;
+    background: url('img/xiaoliu.png') center;
+    background-size: 100% 100%;
+    animation: xiaoliu 2s ease 5s;
+    animation-fill-mode: both;
+}
+/* 边框动画 */
+@keyframes frame
+{
+    from {
+        transform:scale(1.1);
+    }
+    to {
+        transform:scale(1.0);
+    }
+}
+ 
+@-webkit-keyframes frame /* Safari 与 Chrome */
+{
+    from {
+        transform:scale(1.1);
+    }
+    to {
+        transform:scale(1.0);
+    }
+}
+/* 气球动画 */
+@keyframes left-qiqiu
+{
+    from {
+        top:60%;
+        left:0;
+        display: none;
+        opacity: 0;
+    }
+    to {
+        top:21%;
+        left:-12%;
+        display: block;
+        opacity: 100;
+    }
+}
+ 
+@-webkit-keyframes left-qiqiu /* Safari 与 Chrome */
+{
+    from {
+        top:60%;
+        left:0;
+        display: none;
+        opacity: 0;
+    }
+    to {
+        top:21%;
+        left:-12%;
+        display: block;
+        opacity: 100;
+    }
+}
+@keyframes right-qiqiu
+{
+    from {
+        top:60%;
+        right:0;
+        display: none;
+        opacity: 0;
+    }
+    to {
+        top:40%;
+        right:-6%;
+        display: block;
+        opacity: 100;
+    }
+}
+ 
+@-webkit-keyframes right-qiqiu /* Safari 与 Chrome */
+{
+    from {
+        top:60%;
+        right:0;
+        display: none;
+        opacity: 0;
+    }
+    to {
+        top:22%;
+        right:-12%;
+        display: block;
+        opacity: 100;
+    }
+}
+/* forever字样动画 */
+@keyframes forever
+{
+    from {
+        left:-50%;
+        display: none;
+        opacity: 0;
+    }
+    to {
+        left:0;
+        display: block;
+        opacity: 100;
+        transform:scale(0.8);
+		transition-property:transfrom;
+        transition-duration: 2s;
+        transition-delay:1s;
+    }
+}
+ 
+@-webkit-keyframes forever /* Safari 与 Chrome */
+{
+    from {
+        left:-50%;
+        display: none;
+        opacity: 0;
+    }
+    to {
+        left:0;
+        display: block;
+        opacity: 100;
+        transform:scale(0.8);
+		transition-property:transfrom;
+        transition-duration: 2s;
+        transition-delay:1s;
+    }
+}
+/* 头像动画：小田 */
+@keyframes xiaotian
+{
+    0% {
+        top:0;
+        left:45%;
+        display: none;
+        opacity: 0;
+        transform:scale(0.5);
+    }
+    50% {
+        top:0;
+        left:45%;
+        display: block;
+        opacity: 100;
+        transform:scale(1);
+        /* transform: rotate(15deg); */
+		transition-property:transfrom;
+        transition-duration: 2s;
+        transition-delay: 2s;
+    }
+    100%{
+        top:0;
+        left:45%;
+        display: block;
+        opacity: 100;
+        transform:scale(1);
+        transform: rotate(15deg);
+		transition-property:transfrom;
+        transition-duration: 2s;
+        transition-delay: 2s;
+    }
+}
+@-webkit-keyframes xiaotian /* Safari 与 Chrome */
+{
+    0% {
+        top:0;
+        left:45%;
+        display: none;
+        opacity: 0;
+        transform:scale(0.5);
+    }
+    50% {
+        top:0;
+        left:45%;
+        display: block;
+        opacity: 100;
+        transform:scale(1);
+        /* transform: rotate(15deg); */
+		transition-property:transfrom;
+        transition-duration: 2s;
+        transition-delay: 2s;
+    }
+    100%{
+        top:0;
+        left:45%;
+        display: block;
+        opacity: 100;
+        transform:scale(1);
+        transform: rotate(15deg);
+		transition-property:transfrom;
+        transition-duration: 2s;
+        transition-delay: 2s;
+    }
+}
+/* 头像动画：小刘 */
+@keyframes xiaoliu
+{
+    from {
+        top:0;
+        right:10%;
+        display: none;
+        opacity: 0;
+        transform:scale(0.5);
+    }
+    to {
+        top:0;
+        right:10%;
+        display: block;
+        opacity: 100;
+        transform:scale(1);
+		transition-property:transfrom;
+        transition-duration: 2s;
+        transition-delay:1s;
+    }
+}
+ 
+@-webkit-keyframes xiaoliu /* Safari 与 Chrome */
+{
+    from {
+        top:0;
+        right:10%;
+        display: none;
+        opacity: 0;
+        transform:scale(0.5);
+    }
+    to {
+        top:0;
+        right:10%;
+        display: block;
+        opacity: 100;
+        transform:scale(1);
+		transition-property:transfrom;
+        transition-duration: 2s;
+        transition-delay:1s;
+    }
+}
+/* 头像摇摆 */
+@keyframes shake
+{
+    from {
+        transform:rotate(0deg);
+        transition-property:transfrom;
+        transition-duration: 2s;
+        transition-delay:1s;
+    }
+    to {
+        transform:rotate(15deg);
+		transition-property:transfrom;
+        transition-duration: 2s;
+        transition-delay:1s;
+    }
+}
+/* 文字 */
+@keyframes textanimation
+{
+    from {
+        display: none;
+        opacity: 0;
+    }
+    to {
+        display: block;
+        opacity: 100;
+    }
+}

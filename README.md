@@ -1,2 +1,0 @@
-# zijeak.github.io
-Blog
